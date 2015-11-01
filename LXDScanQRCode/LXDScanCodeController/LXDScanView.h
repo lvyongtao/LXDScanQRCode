@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+/*! 扫描成功发送通知（在代理实现的情况下不发送）*/
+extern NSString * const LXDSuccessScanQRCodeNotification;
+/*! 通知传递数据中存储二维码信息的关键字*/
+extern NSString * const LXDScanQRCodeMessageKey;
+
 @class LXDScanView;
 @protocol LXDScanViewDelegate <NSObject>
 

@@ -315,6 +315,8 @@
         if ([self.delegate respondsToSelector: @selector(scanView:codeInfo:)]) {
             [self.delegate scanView: self codeInfo: metadataObject.stringValue];
             [self removeFromSuperview];
+        } else {
+            [[NSNotificationCenter defaultCenter] postNotificationName: LXDSuccessScanQRCodeNotification object: self userInfo: @{ LXDScanQRCodeMessageKey: metadataObject.stringValue }];
         }
     }
 }
