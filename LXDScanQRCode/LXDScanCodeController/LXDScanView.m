@@ -283,8 +283,8 @@
 {
     CGFloat size = SCREENWIDTH * (1 - 2 * SCANSPACEOFFSET);
     CGFloat minY = (SCREENHEIGHT - size) * 0.5 / SCREENHEIGHT;
-    CGFloat maxY = (SCREENHEIGHT + size) * 0.5 / SCREENHEIGHT;
-    self.output.rectOfInterest = CGRectMake(minY, SCANSPACEOFFSET, maxY, 1 - SCANSPACEOFFSET);
+    CGFloat maxY = size * 2 / SCREENHEIGHT;
+    self.output.rectOfInterest = CGRectMake(minY, SCANSPACEOFFSET, maxY, 1 - SCANSPACEOFFSET * 2);
     
     [self.layer addSublayer: self.shadowLayer];
     [self.layer addSublayer: self.scanRectLayer];
