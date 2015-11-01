@@ -13,7 +13,7 @@ LXDScanView           通过代理LXDScanViewDelegate回调、通过发送LXDSuc
 ***代理方式 - 通过LXDScanCodeControllerDelegate代理回调***<br />
 ```- (void)scanCodeController:(LXDScanCodeController *)scanCodeController codeInfo:(NSString *)codeInfo
 {
-    NSURL * url = [NSURL URLWithString: codeInfo];
+    NSURL * url = [NSURL URLWithString: codeInfo];<br />
     if ([[UIApplication sharedApplication] canOpenURL: url]) {
         [[UIApplication sharedApplication] openURL: url];
     } else {
