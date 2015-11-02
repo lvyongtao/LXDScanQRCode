@@ -9,6 +9,9 @@
 #import "LXDScanView.h"
 #import <AVFoundation/AVFoundation.h>
 
+NSString * const LXDSuccessScanQRCodeNotification = @"LXDSuccessScanQRCodeNotification";
+NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
+
 #define SCANSPACEOFFSET 0.15f
 #define REMINDTEXT @"将二维码/条码放入框内，即可自动扫描"
 #define SCREENBOUNDS [UIScreen mainScreen].bounds
