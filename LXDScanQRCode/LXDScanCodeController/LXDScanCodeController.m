@@ -71,6 +71,8 @@
     if ([_scanDelegate respondsToSelector: @selector(scanCodeController:codeInfo:)]) {
         [_scanDelegate scanCodeController: self codeInfo: codeInfo];
         [self.navigationController popViewControllerAnimated: YES];
+    } else {
+        [[NSNotificationCenter defaultCenter] postNotificationName: LXDSuccessScanQRCodeNotification object: self userInfo: @{ LXDScanQRCodeMessageKey: codeInfo }];
     }
 }
 
