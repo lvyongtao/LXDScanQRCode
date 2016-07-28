@@ -36,8 +36,10 @@
 #pragma mark - life
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview: self.scanView];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated

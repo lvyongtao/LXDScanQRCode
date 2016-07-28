@@ -30,7 +30,10 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
 @property (nonatomic, strong) CAShapeLayer * scanRectLayer;
 
 @property (nonatomic, assign) CGRect scanRect;
+
+@property (nonatomic, assign) CGRect drawRect;
 @property (nonatomic, strong) UILabel * remind;
+@property (nonatomic, strong) BorderView *borderview;
 
 @end
 
@@ -58,6 +61,7 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
         [self.layer addSublayer: self.scanView];
         [self setupScanRect];
         [self addSubview: self.remind];
+        [self addSubview:self.borderview];
         self.layer.masksToBounds = YES;
     }
     return self;
@@ -158,7 +162,14 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
     }
     return _scanRect;
 }
-
+- (BorderView *)borderview{
+    if (!_borderview) {
+        
+        _borderview = [[BorderView alloc] initWithFrame:CGRectMake(self.scanRect.origin.x - 2, self.scanRect.origin.y - 2, self.scanRect.size.width + 4, self.scanRect.size.height + 4)];
+        _borderview.backgroundColor = [UIColor clearColor];
+       }
+    return _borderview;
+}
 /**
  *  提示文本
  */
@@ -195,7 +206,7 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
         _scanRectLayer = [CAShapeLayer layer];
         _scanRectLayer.path = [UIBezierPath bezierPathWithRect: scanRect].CGPath;
         _scanRectLayer.fillColor = [UIColor clearColor].CGColor;
-        _scanRectLayer.strokeColor = [UIColor orangeColor].CGColor;
+        _scanRectLayer.strokeColor = [UIColor grayColor].CGColor;
     }
     return _scanRectLayer;
 }
@@ -300,8 +311,8 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
  */
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self stop];
-    [self removeFromSuperview];
+//    [self stop];
+//    [self removeFromSuperview];
 }
 
 
@@ -323,6 +334,9 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
         }
     }
 }
-
-
+- (void)drawRect:(CGRect)rect{
+    
+//    CGContextRef ctx = UIGraphicsGetCurrentContext();
+//    [self addCornerLineWithContext:ctx rect:self.scanRect];
+}
 @end

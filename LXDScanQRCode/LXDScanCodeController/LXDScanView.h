@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BorderView.h"
 
 /*! 扫描成功发送通知（在代理实现的情况下不发送）*/
 extern NSString * const LXDSuccessScanQRCodeNotification;
