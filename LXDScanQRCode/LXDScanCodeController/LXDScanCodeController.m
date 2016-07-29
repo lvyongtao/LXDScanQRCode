@@ -52,6 +52,7 @@
 {
     [super viewDidDisappear: animated];
     [self.scanView stop];
+    [self.scanView stopScanAnimation];
 }
 
 - (void)didReceiveMemoryWarning {

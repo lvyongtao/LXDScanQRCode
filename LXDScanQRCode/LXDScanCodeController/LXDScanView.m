@@ -327,6 +327,17 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
                                        InView:self
                                         Image:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_full_net"]];
 }
+
+- (void)stopScanAnimation
+{
+    if (_scanLineAnimation) {
+        [_scanLineAnimation stopAnimating];
+    }
+    
+    if (_scanNetAnimation) {
+        [_scanNetAnimation stopAnimating];
+    }
+}
 /**
  *  配置扫描范围
  */
