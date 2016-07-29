@@ -63,6 +63,8 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
         [self addSubview: self.remind];
         [self addSubview:self.borderview];
         self.layer.masksToBounds = YES;
+        [self startScanAnimation:LBXScanAnimationLine];
+       
     }
     return self;
 }
@@ -289,7 +291,42 @@ NSString * const LXDScanQRCodeMessageKey = @"LXDScanQRCodeMessageKey";
         _output.metadataObjectTypes = @[AVMetadataObjectTypeQRCode, AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code, AVMetadataObjectTypeCode128Code];
     }
 }
-
+/**
+ *  扫描区域动画
+ */
+- (void)startScanAnimation:(LBXScanAnimationType )type{
+    switch (type) {
+        case LBXScanAnimationLine:
+            [self startScanAnimationWithLineAniamtion:_scanLineAnimation];
+            break;
+        case LBXScanAnimationNet:
+            [self startScanAnimationWithNetAnimation:_scanNetAnimation];
+            break;
+        case LBXScanAnimationNone:
+            
+            break;
+            
+        default:
+            break;
+    }
+   
+}
+- (void)startScanAnimationWithLineAniamtion:(LBXScanLineAnimation *)scanLineAnimation{
+    //线动画
+    if (!_scanLineAnimation)
+        self.scanLineAnimation = [[LBXScanLineAnimation alloc]init];
+    [_scanLineAnimation startAnimatingWithRect:self.scanRect
+                                        InView:self
+                                         Image:[UIImage imageNamed:@"CodeScan.bundle/qrcode_Scan_weixin_Line"]];
+}
+- (void)startScanAnimationWithNetAnimation:(LBXScanNetAnimation *)scanNetAnimation{
+    //网格动画
+    if (!_scanNetAnimation)
+        self.scanNetAnimation = [[LBXScanNetAnimation alloc]init];
+    [_scanNetAnimation startAnimatingWithRect:self.scanRect
+                                       InView:self
+                                        Image:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_full_net"]];
+}
 /**
  *  配置扫描范围
  */

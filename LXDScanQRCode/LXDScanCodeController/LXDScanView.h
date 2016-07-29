@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "BorderView.h"
+#import "LBXScanNetAnimation.h"
+#import "LBXScanLineAnimation.h"
+
+
+
 
 /*! 扫描成功发送通知（在代理实现的情况下不发送）*/
 extern NSString * const LXDSuccessScanQRCodeNotification;
@@ -21,6 +26,16 @@ extern NSString * const LXDScanQRCodeMessageKey;
 
 @end
 
+/**
+ 扫码区域动画效果
+ */
+
+typedef NS_ENUM(NSInteger,LBXScanAnimationType){
+    LBXScanAnimationLine = 0,   //线条上下移动
+    LBXScanAnimationNet,//网格
+    LBXScanAnimationNone,//无
+
+};
 /*!
  *  @class
  *
@@ -29,6 +44,12 @@ extern NSString * const LXDScanQRCodeMessageKey;
  */
 @interface LXDScanView : UIView
 
+
+@property (assign, nonatomic) LBXScanAnimationType scanType;
+//线条扫码动画封装
+@property (nonatomic,strong)LBXScanLineAnimation *scanLineAnimation;
+//网格扫码动画封装
+@property (nonatomic,strong)LBXScanNetAnimation *scanNetAnimation;
 /*! 扫描回调代理人*/
 @property (nonatomic, weak) id<LXDScanViewDelegate> delegate;
 
@@ -39,5 +60,14 @@ extern NSString * const LXDScanQRCodeMessageKey;
 - (void)start;
 /*! 结束扫描*/
 - (void)stop;
+/**
+ *  开始扫描动画
+ */
+- (void)startScanAnimationWithAniamtionType:(LBXScanAnimationType *)animationType;
+
+/**
+ *  结束扫描动画
+ */
+- (void)stopScanAnimation;
 
 @end
