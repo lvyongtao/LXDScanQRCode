@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8322EF11D54823A0032F439 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8322EEE1D54823A0032F439 /* LBXScanLineAnimation.m */; };
+		D8322EF21D54823A0032F439 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D8322EF01D54823A0032F439 /* LBXScanNetAnimation.m */; };
 		D893AAE71D4AED0F00FABA46 /* BorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D893AAE61D4AED0F00FABA46 /* BorderView.m */; };
-		D893AAED1D4AED4300FABA46 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D893AAEA1D4AED4300FABA46 /* LBXScanLineAnimation.m */; };
-		D893AAEE1D4AED4300FABA46 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D893AAEC1D4AED4300FABA46 /* LBXScanNetAnimation.m */; };
 		D893AAF01D4AF00C00FABA46 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D893AAEF1D4AF00B00FABA46 /* CodeScan.bundle */; };
 		EFE6D0261BCF459500D8C13D /* LXDScanCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE6D0231BCF459500D8C13D /* LXDScanCodeController.m */; };
 		EFE6D0271BCF459500D8C13D /* LXDScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE6D0251BCF459500D8C13D /* LXDScanView.m */; };
@@ -41,12 +41,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8322EED1D54823A0032F439 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
+		D8322EEE1D54823A0032F439 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
+		D8322EEF1D54823A0032F439 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
+		D8322EF01D54823A0032F439 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
 		D893AAE51D4AED0F00FABA46 /* BorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BorderView.h; sourceTree = "<group>"; };
 		D893AAE61D4AED0F00FABA46 /* BorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BorderView.m; sourceTree = "<group>"; };
-		D893AAE91D4AED4300FABA46 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
-		D893AAEA1D4AED4300FABA46 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
-		D893AAEB1D4AED4300FABA46 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
-		D893AAEC1D4AED4300FABA46 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
 		D893AAEF1D4AF00B00FABA46 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		EFE6D0221BCF459500D8C13D /* LXDScanCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDScanCodeController.h; sourceTree = "<group>"; };
 		EFE6D0231BCF459500D8C13D /* LXDScanCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDScanCodeController.m; sourceTree = "<group>"; };
@@ -95,23 +95,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D893AAE81D4AED4300FABA46 /* ScanQRCodeAnimaiton */ = {
+		D8322EEC1D54823A0032F439 /* ScanQRCodeAnimaiton */ = {
 			isa = PBXGroup;
 			children = (
-				D893AAE91D4AED4300FABA46 /* LBXScanLineAnimation.h */,
-				D893AAEA1D4AED4300FABA46 /* LBXScanLineAnimation.m */,
-				D893AAEB1D4AED4300FABA46 /* LBXScanNetAnimation.h */,
-				D893AAEC1D4AED4300FABA46 /* LBXScanNetAnimation.m */,
+				D8322EED1D54823A0032F439 /* LBXScanLineAnimation.h */,
+				D8322EEE1D54823A0032F439 /* LBXScanLineAnimation.m */,
+				D8322EEF1D54823A0032F439 /* LBXScanNetAnimation.h */,
+				D8322EF01D54823A0032F439 /* LBXScanNetAnimation.m */,
 			);
-			name = ScanQRCodeAnimaiton;
-			path = ../../../LBXScan/LBXScan/ScanQRCodeAnimaiton;
+			path = ScanQRCodeAnimaiton;
 			sourceTree = "<group>";
 		};
 		EFE6D0211BCF459500D8C13D /* LXDScanCodeController */ = {
 			isa = PBXGroup;
 			children = (
+				D8322EEC1D54823A0032F439 /* ScanQRCodeAnimaiton */,
 				D893AAEF1D4AF00B00FABA46 /* CodeScan.bundle */,
-				D893AAE81D4AED4300FABA46 /* ScanQRCodeAnimaiton */,
 				EFE6D0221BCF459500D8C13D /* LXDScanCodeController.h */,
 				EFE6D0231BCF459500D8C13D /* LXDScanCodeController.m */,
 				EFE6D0241BCF459500D8C13D /* LXDScanView.h */,
@@ -319,9 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D893AAED1D4AED4300FABA46 /* LBXScanLineAnimation.m in Sources */,
+				D8322EF11D54823A0032F439 /* LBXScanLineAnimation.m in Sources */,
 				EFE6D0271BCF459500D8C13D /* LXDScanView.m in Sources */,
-				D893AAEE1D4AED4300FABA46 /* LBXScanNetAnimation.m in Sources */,
+				D8322EF21D54823A0032F439 /* LBXScanNetAnimation.m in Sources */,
 				EFE7025F1BCCF1960044F735 /* ViewController.m in Sources */,
 				EFE7025C1BCCF1960044F735 /* AppDelegate.m in Sources */,
 				EFE6D0261BCF459500D8C13D /* LXDScanCodeController.m in Sources */,
